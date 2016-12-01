@@ -10,5 +10,30 @@
 </head>
 <body>
   <app-root>Loading...</app-root>
+    
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+<script>
+  //Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCIA-TBV9a8RvaRgHkfjL9BgumtBleqN5Q",
+    authDomain: "fir-project-e4c92.firebaseapp.com",
+    databaseURL: "https://fir-project-e4c92.firebaseio.com",
+    storageBucket: "fir-project-e4c92.appspot.com",
+    messagingSenderId: "852769832406"
+  };
+  firebase.initializeApp(config);
+    
+  <!-- Read from database - create a reference to the root node of the database - use Firebase SDK & Firebase RT Database -->
+  var root = firebase.database().ref();
+    
+  <!-- use SDK to subscribe to the node value and pass in a callback which will be called once the value is available -->
+  
+      root.on('value', function(snap){
+    
+      console.log(snap.val()); <!-- First Firebase Query -->
+      
+  });
+</script>
+    
 </body>
 </html>
