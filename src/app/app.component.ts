@@ -9,7 +9,7 @@ import {initializeApp, database} from 'firebase';
 })
 export class AppComponent {
   title = 'Hello World Angular 2!';
-
+/*
   constructor() {
 
       var config = {
@@ -30,5 +30,5 @@ export class AppComponent {
 
   });
 
-  }
+  }*/
 }
